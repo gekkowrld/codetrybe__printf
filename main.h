@@ -1,9 +1,8 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-
-#include <stdarg.h> /* For variadic functions*/
 #include <limits.h> /* For useful limits that should not be reached*/
+#include <stdarg.h> /* For variadic functions*/
 #include <stdio.h>
 
 /**
@@ -28,12 +27,11 @@
  *
  * Exceptions include _putchar(char x) and family
  *
-*/
+ */
 
-typedef struct fmt_specifiers
-{
-    char *fmt;
-    int (*function)(va_list);
+typedef struct fmt_specifiers {
+  char *fmt;
+  int (*function)(va_list);
 } fmt_specifier;
 
 #endif /* End of MAIN_H_ */
