@@ -32,8 +32,8 @@
 
 typedef struct fmt_specifiers
 {
-	char *fmt;
-	int (*function)(va_list);
+    char *fmt;
+    int (*function)(va_list);
 } fmt_specifier;
 
 #endif /* End of MAIN_H_ */
