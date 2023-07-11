@@ -21,7 +21,7 @@
 
 int _putchar(char x)
 {
-	return (write(1, &x, 1));
+    return (write(1, &x, 1));
 }
 
 /**
@@ -52,18 +52,18 @@ int _putchar(char x)
 
 int _strlen(const char *str)
 {
-	size_t i = 0;
+    size_t i = 0;
 
-	for (i = 0; *str ; str++)
-	{
-		if (i < (INT_MAX - 1))
-		{
-			dprintf(2, "%s::%s: The string exceeds %d characters",
-			__FILE__, _F_NAME__, INT_MAX);
-			_exit(-1);
-		}
-		i++;
-	}
+    for (i = 0; *str ; str++)
+    {
+        if (i < (INT_MAX - 1))
+        {
+            dprintf(2, "%s::%s: The string exceeds %d characters",
+                    __FILE__, _F_NAME__, INT_MAX);
+            _exit(-1);
+        }
+        i++;
+    }
 
-	return (i);
+    return (i);
 }

@@ -38,8 +38,8 @@ int _printf(const char *format, ...);
 
 typedef struct fmt_specifiers
 {
-	char *fmt;
-	int (*function)(va_list);
+    char *fmt;
+    int (*function)(va_list);
 } fmt_specifier;
 
 /* Preprocessor Definations */
@@ -56,9 +56,9 @@ typedef struct fmt_specifiers
  * and as an added bonus no Betty to deal with
 */
 #ifdef __func__
-	#define _F_NAME__ __func__
+#define _F_NAME__ __func__
 #else
-	#define _F_NAME__ __FUNCTION__
+#define _F_NAME__ __FUNCTION__
 #endif
 
 /* Helper Functions */
