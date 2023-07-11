@@ -20,22 +20,18 @@ static int parser(const char *format, fmt_specifier fmt[], va_list args);
  *
  * The pass the arguments to the "parser" where they are mapped to their
  * respective handlers.
-*/
+ */
 
-int _printf(const char *format, ...)
-{
-    int printed_char = 0;
-    va_list args;
+int _printf(const char *format, ...) {
+  int printed_char = 0;
+  va_list args;
 
-    fmt_specifier fmt[] = {
-        {"c", handle_char},
-        {NULL, NULL}
-    };
+  fmt_specifier fmt[] = {{"c", handle_char}, {NULL, NULL}};
 
-    va_start(args, format);
-    printed_char = parser(format, fmt, args);
-    va_end(args);
-    return (printed_char);
+  va_start(args, format);
+  printed_char = parser(format, fmt, args);
+  va_end(args);
+  return (printed_char);
 }
 
 /**
@@ -71,48 +67,40 @@ int _printf(const char *format, ...)
  * the character.
  * Increase the format and return the number of characters
  * parsed
-*/
+ */
 
-static int parser(const char *format, fmt_specifier fmt[], va_list args)
-{
-    int i = 0, j, p_char = 0;
-    char t_fmt = '%';
+static int parser(const char *format, fmt_specifier fmt[], va_list args) {
+  int i = 0, j, p_char = 0;
+  char t_fmt = '%';
 
-    if (format == NULL)
-        format = "";
+  if (format == NULL)
+    format = "";
 
-    while (*format)
-    {
-        j = 0;
+  while (*format) {
+    j = 0;
 
-        if (format[i] == t_fmt)
-        {
-            while (fmt[j].fmt != NULL)
-            {
-                if (fmt[j].fmt[0] == format[i + 1])
-                {
-                    p_char += fmt[j].function(args);
-                    i++; /* Move forward in the format[] string*/
-                    break; /* Exit the loop */
-                }
-                j++;
-            }
-
-            if (fmt[j].fmt == NULL && format[i + 1])
-            {
-                _putchar(format[i]);
-                p_char++;
-            }
-
+    if (format[i] == t_fmt) {
+      while (fmt[j].fmt != NULL) {
+        if (fmt[j].fmt[0] == format[i + 1]) {
+          p_char += fmt[j].function(args);
+          i++;   /* Move forward in the format[] string*/
+          break; /* Exit the loop */
         }
-        else
-        {
-            _putchar(format[i]);
-            p_char++;
-        }
+        j++;
+      }
 
-        format++;
+      if (fmt[j].fmt == NULL && format[i + 1]) {
+        _putchar(format[i]);
+        p_char++;
+      }
+
+    } else {
+      _putchar(format[i]);
+      p_char++;
     }
 
-    return (p_char);
+    format++;
+  }
+
+  return (p_char);
 }

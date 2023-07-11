@@ -10,11 +10,10 @@
  * After we get it, we pass it to putchar which simply prints
  * the value of the character
  *
-*/
+ */
 
-int handle_char(va_list args)
-{
-    char x = va_arg(args, int);
+int handle_char(va_list args) {
+  char x = va_arg(args, int);
 
-    return (_putchar(x));
+  return (_putchar(x));
 }

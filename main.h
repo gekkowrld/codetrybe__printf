@@ -1,16 +1,14 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-
-#include <stdarg.h> /* For variadic functions*/
 #include <limits.h> /* For useful limits that should not be reached*/
+#include <stdarg.h> /* For variadic functions*/
 #include <stdio.h>
 #include <unistd.h>
 
 /* Printf prototype (Takes in variable arguments)*/
 
 int _printf(const char *format, ...);
-
 
 /**
  * struct fmt_specifiers - A blueprint for declaring printf formats
@@ -34,12 +32,11 @@ int _printf(const char *format, ...);
  *
  * Exceptions include _putchar(char x) and family
  *
-*/
+ */
 
-typedef struct fmt_specifiers
-{
-    char *fmt;
-    int (*function)(va_list);
+typedef struct fmt_specifiers {
+  char *fmt;
+  int (*function)(va_list);
 } fmt_specifier;
 
 /* Preprocessor Definations */
@@ -54,7 +51,7 @@ typedef struct fmt_specifiers
  * You can remove the operation and replace it with
  * #define _F_NAME_ __func__ and everything will work just fine
  * and as an added bonus no Betty to deal with
-*/
+ */
 #ifdef __func__
 #define _F_NAME__ __func__
 #else

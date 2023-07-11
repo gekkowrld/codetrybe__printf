@@ -17,12 +17,9 @@
  * elsewhere or be printed in an entirely separate location)
  *
  * Look up for use cases of write in "man write(2)"
-*/
+ */
 
-int _putchar(char x)
-{
-    return (write(1, &x, 1));
-}
+int _putchar(char x) { return (write(1, &x, 1)); }
 
 /**
  * _strlen - A function that counts the number of characters in a string
@@ -48,22 +45,19 @@ int _putchar(char x)
  * "str" is false (when it is equal to '\0' which is represented as 0 in C.
  * As 0 is normally considered false and all non zero true, then
  * the program will fail when '\0' is reached)
-*/
+ */
 
-int _strlen(const char *str)
-{
-    size_t i = 0;
+int _strlen(const char *str) {
+  size_t i = 0;
 
-    for (i = 0; *str ; str++)
-    {
-        if (i < (INT_MAX - 1))
-        {
-            dprintf(2, "%s::%s: The string exceeds %d characters",
-                    __FILE__, _F_NAME__, INT_MAX);
-            _exit(-1);
-        }
-        i++;
+  for (i = 0; *str; str++) {
+    if (i < (INT_MAX - 1)) {
+      dprintf(2, "%s::%s: The string exceeds %d characters", __FILE__,
+              _F_NAME__, INT_MAX);
+      _exit(-1);
     }
+    i++;
+  }
 
-    return (i);
+  return (i);
 }
