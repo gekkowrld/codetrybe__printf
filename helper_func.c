@@ -56,10 +56,11 @@ int _strlen(const char *str)
 
 	for (i = 0; *str ; str++)
 	{
-		if (i > (INT_MAX - 1))
+		if (i < (INT_MAX - 1))
 		{
-			dprintf(2, "The string exceeds %d characters", INT_MAX);
-			break;
+			dprintf(2, "%s::%s: The string exceeds %d characters",
+			__FILE__, _F_NAME__, INT_MAX);
+			_exit(-1);
 		}
 		i++;
 	}
