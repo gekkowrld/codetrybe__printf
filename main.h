@@ -5,6 +5,7 @@
 #include <stdarg.h> /* For variadic functions*/
 #include <limits.h> /* For useful limits that should not be reached*/
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * struct fmt_specifiers - A blueprint for declaring printf formats
@@ -35,5 +36,16 @@ typedef struct fmt_specifiers
 	char *fmt;
 	int (*function)(va_list);
 } fmt_specifier;
+
+/* Preprocessor Definations */
+
+#define BUFFER_S 1024
+
+/* Helper Functions */
+
+int _putchar(char x);
+int _strlen(const char *str);
+
+/* Format specifiers */
 
 #endif /* End of MAIN_H_ */
