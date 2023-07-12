@@ -2,14 +2,14 @@
 ## About
 This project aims at implementing the `C` standard library `printf()` function in a way that is more readable and easy to understand, such that one can learn the logic and algorithm and not float or get totally confused at the sight of it. We came up with this project in a bid to make the renowned and dreaded *ALX `printf()` project* easier for as many as will really dedicate their time to doing hard things.
 
-It is important to not that one has to have certain knowledge of `C` programming as prerequisites for these codes to make sense; students of **ALX SE** can relate.
+Note that: one has to have certain knowledge of `C` programming as prerequisites for these codes to make sense; students of **ALX SE** can relate.
 
 ## Prerequisite Knowledge
-Try not to be overwhelmed at this point but the concepts that you should have practically learned before attempting the printf project on your own includes:
+Try not to be overwhelmed at this point but the concepts that you should have practically learned before attempting the `printf()` project on your own include:
 - Variables
 - Conditional statements (if-else)
 - Loops and nested loops (for, while, do-while)
-- Functions
+- Functions (return values, header files betty coding style)
 - Debugging (finding and fixing errors in programs)
 - Pointers, arrays and strings
 - Double pointers and function pointers
