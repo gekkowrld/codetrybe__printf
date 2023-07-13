@@ -36,4 +36,4 @@ The programs were written on the command line of a Linux distro, Ubuntu 22.04.2,
 ## Conclusion
 *loading...*
 
-###### A CodeTrybe(https://github.com/codetrybe) Project
+###### A [CodeTrybe](https://github.com/codetrybe) Project
