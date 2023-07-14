@@ -36,5 +36,4 @@ The programs were written on the command line of a Linux distro, Ubuntu 22.04.2,
 ## Conclusion
 *loading...*
 
-#### Authors
-This project was carried out by **CodeTrybe Main Team** and had [Gekko wrld](https://chat.whatsapp.com/KctqbscxIX1E3jcXqfYGfz) in the forefront, heavily supported by Topman, Whyte Okoronkwo, Abiodun Amadu
+###### A [CodeTrybe](https://github.com/codetrybe) Project
