@@ -16,7 +16,8 @@
  * to the stdout (the terminal for most cases but can be redirected
  * elsewhere or be printed in an entirely separate location)
  *
- * Look up for use cases of write in "man write(2)"
+ * Resources:
+ * man write(2)
 */
 
 int _putchar(char x)
@@ -58,8 +59,8 @@ int _strlen(const char *str)
 	{
 		if (i < (INT_MAX - 1))
 		{
-			dprintf(2, "%s::%s: The string exceeds %d characters",
-			__FILE__, _F_NAME__, INT_MAX);
+			dprintf(2, "%s: The string exceeds %d characters",
+			__FILE__, INT_MAX);
 			_exit(-1);
 		}
 		i++;

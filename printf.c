@@ -29,6 +29,8 @@ int _printf(const char *format, ...)
 
 	fmt_specifier fmt[] = {
 		{"c", handle_char},
+		{"s", handle_str},
+		{"%", handle_pc},
 		{NULL, NULL}
 	};
 
